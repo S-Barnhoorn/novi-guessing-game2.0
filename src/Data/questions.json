@@ -17,7 +17,7 @@
   },
   {
     "questionText": "You live in a one story house made entirely of redwood. What color would the stairs be?",
-    "answerOptions":["Red", "Blue", "There are no stairs","Yellow"]
-    "isCorrect": "There are no stairs"gi
+    "answerOptions":["Red", "Blue", "There are no stairs","Yellow"],
+    "isCorrect": "There are no stairs"
   }
 ]
