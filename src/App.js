@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Start from "./Components/Start/Start";
+import Question from "./Components/Question/Question";
+import questions from './Data/questions.json'
+import End from "./Components/End/End";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [step, setStep] = useState(1);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [answers, setAnswers] = useState([]);
+
+    const quizHandler = () => {
+        setStep(2);
+    }
+
+    return (
+        <div>
+            {step === 1 &&
+            <Start
+                onQuizStart={quizHandler}
+            />}
+            {step === 2 &&
+            <Question
+                data={questions.data[currentQuestion]}
+                onAnswerUpdate={setAnswers}
+                numberOfQuestions={questions.data.length}
+                currentQuestion={currentQuestion}
+                onSetCurrentQuestion={setCurrentQuestion}
+                onSetStep={setStep}
+            />}
+            {step === 3 && <End/>}
+        </div>
+    );
 }
 
 export default App;
