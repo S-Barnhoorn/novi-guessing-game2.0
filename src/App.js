@@ -6,7 +6,7 @@ import End from "./Components/End/End";
 
 function App() {
     const [step, setStep] = useState(1);
-    const [activeQuestion, setActiveQuestion] = useState(0);
+    const [currentQuestion, setCurrentQuestion] = useState(0);
     const [answers, setAnswers] = useState([]);
 
     const quizHandler = () => {
@@ -21,11 +21,11 @@ function App() {
             />}
             {step === 2 &&
             <Question
-                data={questions.data[activeQuestion]}
+                data={questions.data[currentQuestion]}
                 onAnswerUpdate={setAnswers}
                 numberOfQuestions={questions.data.length}
-                activeQuestion={activeQuestion}
-                onSetActiveQuestion={setActiveQuestion}
+                currentQuestion={currentQuestion}
+                onSetCurrentQuestion={setCurrentQuestion}
                 onSetStep={setStep}
             />}
             {step === 3 && <End/>}
