@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Start = () => {
+const Start = ({ onQuizStart}) => {
     return (
         <div>
             <h1>Start</h1>
             <p>Good luck!</p>
-            <button>Start</button>
+            <button type="button" onClick={onQuizStart}>Start</button>
         </div>
     );
 };

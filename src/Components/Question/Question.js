@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 
-const Question = () => {
+const Question = ({ data, onAnswerUpdate, numberOfQuestions, onSetActiveQuestion, activeQuestion, onSetStep}) => {
+    const [selected, setSelected] = useState('');
+    const [error, setError] = useState('');
+
 
 
     return (
@@ -10,6 +13,19 @@ const Question = () => {
                 <input type="radio" name="answer" value=""/>
                 Choices
             </label>
+            <label>
+                <input type="radio" name="answer" value=""/>
+                Choices
+            </label>
+            <label>
+                <input type="radio" name="answer" value=""/>
+                Choices
+            </label>
+            <label>
+                <input type="radio" name="answer" value=""/>
+                Choices
+            </label>
+            <div>error here</div>
             <button type="button">Next</button>
 
         </div>
