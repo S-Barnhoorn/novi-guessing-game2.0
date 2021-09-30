@@ -1,0 +1,23 @@
+[
+  {
+    "questionText": "What did the fish say when he swam into the wall?",
+    "answerOptions":["Dam", "Godd$*%@!", "Auw.. :'(", "blub"],
+    "isCorrect": "Dam"
+  },
+  {
+    "questionText": "What room do ghosts avoid?",
+    "answerOptions":["The bathroom", "The study room", "The bedroom", "The living room"],
+    "isCorrect": "The living room"
+
+  },
+  {
+    "questionText": "What did the ocean say to the beach?",
+    "answerOptions":["Wazaaaa", "Nothing.. it just waved", "How you doing?", "blub"],
+    "isCorrect": "Nothing.. it just waved"
+  },
+  {
+    "questionText": "You live in a one story house made entirely of redwood. What color would the stairs be?",
+    "answerOptions":["Red", "Blue", "There are no stairs","Yellow"],
+    "isCorrect": "There are no stairs"
+  }
+]
